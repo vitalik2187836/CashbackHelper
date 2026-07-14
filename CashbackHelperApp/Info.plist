@@ -2,18 +2,36 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+
 			<key>CFBundleURLName</key>
 			<string>com.cashbackhelper.app</string>
+
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>cashbackhelper</string>
 			</array>
+
 		</dict>
 	</array>
+
+<key>CFBundleDisplayName</key>
+<string>Кэшбэк</string>
+
+	<key>NSUserSiriUsageDescription</key>
+	<string>Используется для поиска лучшего кэшбэка по категориям.</string>
+
+
+	<key>Siri</key>
+	<array>
+		<string>Найти лучший кэшбэк</string>
+	</array>
+
+
 </dict>
 </plist>

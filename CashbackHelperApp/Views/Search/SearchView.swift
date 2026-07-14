@@ -47,7 +47,7 @@ struct SearchView: View {
             )
 
 
-        if normalized.isEmpty {
+        guard !normalized.isEmpty else {
 
             return []
 
@@ -133,12 +133,13 @@ struct SearchView: View {
         return grouped.compactMap { category, offers in
 
 
-            guard let bestOffer =
+            guard
+                let bestOffer =
                     offers.max(
                         by:
-                            {
-                                $0.percent < $1.percent
-                            }
+                        {
+                            $0.percent < $1.percent
+                        }
                     )
             else {
 
@@ -175,33 +176,32 @@ struct SearchView: View {
 
 
 
+
     var body: some View {
 
 
         NavigationStack {
 
 
-            VStack {
+            VStack(
+                spacing:
+                    12
+            ) {
 
 
-                TextField(
-                    "Категория",
+                SearchField(
                     text:
-                        $query
+                        $query,
+
+                    placeholder:
+                        "Категория"
                 )
-                .textFieldStyle(
-                    .roundedBorder
-                )
-                .padding()
 
 
 
                 MonthPickerView(
                     date:
                         $selectedMonth
-                )
-                .padding(
-                    .horizontal
                 )
 
 
@@ -238,6 +238,7 @@ struct SearchView: View {
                             VStack(
                                 alignment:
                                     .leading,
+
                                 spacing:
                                     6
                             ) {
@@ -262,7 +263,6 @@ struct SearchView: View {
                                         .headline
                                     )
 
-
                                 }
 
 
@@ -286,6 +286,7 @@ struct SearchView: View {
 
                             }
 
+
                         }
 
 
@@ -302,15 +303,24 @@ struct SearchView: View {
 
                     }
 
+
                 }
+                .listStyle(
+                    .insetGrouped
+                )
 
 
             }
-
-
+            .padding(
+                .horizontal
+            )
+            .safeAreaPadding(
+                .top
+            )
             .navigationTitle(
                 "Поиск"
             )
+
 
         }
 

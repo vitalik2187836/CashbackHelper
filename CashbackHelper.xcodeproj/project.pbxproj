@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		348C57253005B7BA009295D8 /* CashbackShareExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 348C571B3005B7BA009295D8 /* CashbackShareExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		34A68FDB30063C4D00008B5E /* CashbackHelperShortcuts.appex in Embed ExtensionKit Extensions */ = {isa = PBXBuildFile; fileRef = 34A68FD230063C4D00008B5E /* CashbackHelperShortcuts.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -17,6 +18,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 348C571A3005B7BA009295D8;
 			remoteInfo = CashbackShareExtension;
+		};
+		34A68FD930063C4D00008B5E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34AD9FBD30053F220061EEFA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 34A68FD130063C4D00008B5E;
+			remoteInfo = CashbackHelperShortcuts;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -32,11 +40,23 @@
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		34A68FE030063C4D00008B5E /* Embed ExtensionKit Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(EXTENSIONS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+				34A68FDB30063C4D00008B5E /* CashbackHelperShortcuts.appex in Embed ExtensionKit Extensions */,
+			);
+			name = "Embed ExtensionKit Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		348C571B3005B7BA009295D8 /* CashbackShareExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CashbackShareExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		34982525300549DB0027AF3F /* CashbackHelperApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CashbackHelperApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		34A68FD230063C4D00008B5E /* CashbackHelperShortcuts.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.extensionkit-extension"; includeInIndex = 0; path = CashbackHelperShortcuts.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -83,6 +103,31 @@
 			);
 			target = 348C571A3005B7BA009295D8 /* CashbackShareExtension */;
 		};
+		34A68FDF30063C4D00008B5E /* Exceptions for "CashbackHelperShortcuts" folder in "CashbackHelperShortcuts" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 34A68FD130063C4D00008B5E /* CashbackHelperShortcuts */;
+		};
+		34A68FF83006661B00008B5E /* Exceptions for "CashbackHelperApp" folder in "CashbackHelperShortcuts" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				AppIntents/BestCashbackIntent.swift,
+				AppIntents/CategoryEntity.swift,
+				AppIntents/CategoryQuery.swift,
+				Models/AppMonth.swift,
+				Models/Bank.swift,
+				Models/BestCashbackResult.swift,
+				Models/CashbackOffer.swift,
+				Models/CategoryDictionaryItem.swift,
+				Models/Person.swift,
+				Services/CashbackSearchService.swift,
+				Shared/ModelContainerProvider.swift,
+				Shared/Services/BestCashbackService.swift,
+			);
+			target = 34A68FD130063C4D00008B5E /* CashbackHelperShortcuts */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -99,8 +144,17 @@
 			exceptions = (
 				342A1D8430055E8400839C3E /* Exceptions for "CashbackHelperApp" folder in "CashbackHelperApp" target */,
 				348C57343005B96B009295D8 /* Exceptions for "CashbackHelperApp" folder in "CashbackShareExtension" target */,
+				34A68FF83006661B00008B5E /* Exceptions for "CashbackHelperApp" folder in "CashbackHelperShortcuts" target */,
 			);
 			path = CashbackHelperApp;
+			sourceTree = "<group>";
+		};
+		34A68FD330063C4D00008B5E /* CashbackHelperShortcuts */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				34A68FDF30063C4D00008B5E /* Exceptions for "CashbackHelperShortcuts" folder in "CashbackHelperShortcuts" target */,
+			);
+			path = CashbackHelperShortcuts;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -120,6 +174,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		34A68FCF30063C4D00008B5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -128,6 +189,7 @@
 			children = (
 				34982526300549DB0027AF3F /* CashbackHelperApp */,
 				348C57073005B6A7009295D8 /* CashbackShareExtension */,
+				34A68FD330063C4D00008B5E /* CashbackHelperShortcuts */,
 				34AD9FC730053F220061EEFA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -137,6 +199,7 @@
 			children = (
 				34982525300549DB0027AF3F /* CashbackHelperApp.app */,
 				348C571B3005B7BA009295D8 /* CashbackShareExtension.appex */,
+				34A68FD230063C4D00008B5E /* CashbackHelperShortcuts.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -171,11 +234,13 @@
 				34982522300549DB0027AF3F /* Frameworks */,
 				34982523300549DB0027AF3F /* Resources */,
 				348C57153005B6A7009295D8 /* Embed Foundation Extensions */,
+				34A68FE030063C4D00008B5E /* Embed ExtensionKit Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				348C57243005B7BA009295D8 /* PBXTargetDependency */,
+				34A68FDA30063C4D00008B5E /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				34982526300549DB0027AF3F /* CashbackHelperApp */,
@@ -186,6 +251,28 @@
 			productName = CashbackHelperApp;
 			productReference = 34982525300549DB0027AF3F /* CashbackHelperApp.app */;
 			productType = "com.apple.product-type.application";
+		};
+		34A68FD130063C4D00008B5E /* CashbackHelperShortcuts */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34A68FDC30063C4D00008B5E /* Build configuration list for PBXNativeTarget "CashbackHelperShortcuts" */;
+			buildPhases = (
+				34A68FCE30063C4D00008B5E /* Sources */,
+				34A68FCF30063C4D00008B5E /* Frameworks */,
+				34A68FD030063C4D00008B5E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				34A68FD330063C4D00008B5E /* CashbackHelperShortcuts */,
+			);
+			name = CashbackHelperShortcuts;
+			packageProductDependencies = (
+			);
+			productName = CashbackHelperShortcuts;
+			productReference = 34A68FD230063C4D00008B5E /* CashbackHelperShortcuts.appex */;
+			productType = "com.apple.product-type.extensionkit-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -201,6 +288,9 @@
 						CreatedOnToolsVersion = 26.6;
 					};
 					34982524300549DB0027AF3F = {
+						CreatedOnToolsVersion = 26.6;
+					};
+					34A68FD130063C4D00008B5E = {
 						CreatedOnToolsVersion = 26.6;
 					};
 				};
@@ -221,6 +311,7 @@
 			targets = (
 				34982524300549DB0027AF3F /* CashbackHelperApp */,
 				348C571A3005B7BA009295D8 /* CashbackShareExtension */,
+				34A68FD130063C4D00008B5E /* CashbackHelperShortcuts */,
 			);
 		};
 /* End PBXProject section */
@@ -234,6 +325,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		34982523300549DB0027AF3F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34A68FD030063C4D00008B5E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -257,6 +355,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		34A68FCE30063C4D00008B5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -264,6 +369,11 @@
 			isa = PBXTargetDependency;
 			target = 348C571A3005B7BA009295D8 /* CashbackShareExtension */;
 			targetProxy = 348C57233005B7BA009295D8 /* PBXContainerItemProxy */;
+		};
+		34A68FDA30063C4D00008B5E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 34A68FD130063C4D00008B5E /* CashbackHelperShortcuts */;
+			targetProxy = 34A68FD930063C4D00008B5E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -332,6 +442,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = CashbackHelperApp/CashbackHelperApp.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 95E5XJFA6C;
@@ -350,6 +461,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = VetalNax.CashbackHelperApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
@@ -366,6 +478,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = CashbackHelperApp/CashbackHelperApp.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 95E5XJFA6C;
@@ -384,9 +497,68 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = VetalNax.CashbackHelperApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		34A68FDD30063C4D00008B5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 95E5XJFA6C;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CashbackHelperShortcuts/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CashbackHelperShortcuts;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = VetalNax.CashbackHelperApp.CashbackHelperShortcuts;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		34A68FDE30063C4D00008B5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 95E5XJFA6C;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CashbackHelperShortcuts/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CashbackHelperShortcuts;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = VetalNax.CashbackHelperApp.CashbackHelperShortcuts;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
@@ -538,6 +710,15 @@
 			buildConfigurations = (
 				3498252E300549DC0027AF3F /* Debug */,
 				3498252F300549DC0027AF3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		34A68FDC30063C4D00008B5E /* Build configuration list for PBXNativeTarget "CashbackHelperShortcuts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34A68FDD30063C4D00008B5E /* Debug */,
+				34A68FDE30063C4D00008B5E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
